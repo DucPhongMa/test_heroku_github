@@ -20,4 +20,6 @@ app.get("/", (req, res) => {
 });
 
 // setup http server to listen on HTTP_PORT
-app.listen(HTTP_PORT);
+app.listen(HTTP_PORT, () => {
+    console.log(`Example app listening at http://localhost:${HTTP_PORT}`)
+});
