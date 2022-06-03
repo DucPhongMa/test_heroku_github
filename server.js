@@ -18,7 +18,7 @@ var app = express();
 app.get("/", (req, res) => {
     res.send("Duc Phong Ma - 137015194");
 });
-
+var count = 0; var maxCount = 5; var myCountInterval = setInterval(function () { console.log("Hello after " + (count++) + " second(s)"); checkMaximum(); }, 3000); var checkMaximum = function () { if (count > maxCount) { clearInterval(myCountInterval); } }
 // setup http server to listen on HTTP_PORT
 app.listen(HTTP_PORT, () => {
     console.log(`Example app listening at http://localhost:${HTTP_PORT}`)
